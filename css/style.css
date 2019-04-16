@@ -13,8 +13,11 @@ body{
 }
 
 .mynav {
+  position:fixed;
+  width: 100%;
   overflow: hidden;
   background-color: #333;
+  z-index: 9;
 }
 
 .mynav a {
@@ -78,24 +81,122 @@ p{
   font-size: 16px;
 }
 
+
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.broadcast {
+  padding: .6rem 0;
+  color: white;
+  display: flex;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.broadcast {
+  background: #444;
+  position: relative;
+  font-weight: bold;
+}
+
+.hide-broadcast {
+    position: absolute;
+    right: 20px;
+    top: 3px;
+  }
+
+.hide-broadcast-target {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      border-radius: 50%;
+      padding: 4px;
+      transition: all ease .3s;
+    }
+
+
+.fa-window-close{
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+
 .projects{
   margin: auto;
   width: 75%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .projectimg{
-  margin: auto;
+  width: 100%;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.projectimg img{
+
+
+
+.flip-card {
+  background-color: transparent;
   width: 400px;
+  height: 266px;
+  border: 1px solid #f1f1f1;
+   perspective: 1000px;
+  margin-top: 30px;
+}
+
+.inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .inner-card {
+  transform: rotateY(180deg);
+}
+
+.front-card, .back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #bbb;
+  color: black;
+}
+
+.back-card {
+  background-color: lightgrey;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card img{
+  width: 400px;
+  height: 266px;
   margin-bottom: 50px;
 }
 
-.projects p{
+.flip-card p{
+  position: relative;
+  bottom: -40%;
+}
+.projects {
     margin-bottom: 50px;
 }
 
@@ -218,11 +319,20 @@ iframe{
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content:center;
+    margin-top: 40px;
   }
 
-  .projectimg img{
-    width:400px;
+  .projectimg .flip-card{
+    width:300px;
+    height: 200px;
     margin-right: 50px;
+  }
+
+  .flip-card img{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
   }
 
   .gallery{
@@ -249,7 +359,6 @@ iframe{
   .aboutcontent p{
   margin-right: 50px;
     }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -259,7 +368,7 @@ iframe{
     display: block;
   }
 
-.mynav.responsive {position: relative;
+.mynav.responsive {position: fixed;
 }
 
 
