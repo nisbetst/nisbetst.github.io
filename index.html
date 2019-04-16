@@ -14,20 +14,12 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138419071-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];ß
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-138419071-1');
     </script>
-    <style type="text/css">
-      @media print {
-       body:after{
-            content:url(http://chart.googleapis.com/chart?
-                  cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=https://nisbetst.github.io/)
-                }
-              }
-            </style>
 </head>
 
 <body class="index">
@@ -47,8 +39,19 @@
   </div>
 </header>
 
+<div class="broadcast">
+  <div class="container"> <p>Welcome to my site!</p>
+  </div>
+  <div class="hide-broadcast">
+    <a href="#" class="hide-broadcast-target">
+        <i class="fas fa-window-close"></i>
+    </a>    
+  </div>
+</div>
 
 <main id="maincontent">
+
+
 
 <h1>MY WORK</h1>
 
@@ -57,18 +60,34 @@
 <p>My name is Stephen Nisbet and I am a UX researher, designer, and life enthusiast. These are the projects I've worked on and this is their story.</p>
 
 <div class="projectimg">
+<div class="flip-card">
   <a href="mylocalrecipe.html">
-    <img src="images/my_local_recipe_preview.png" alt="My Local Recipe Preview">
-    <!-- <p>My Local Recipe Prototype</p> -->
-  </a>
+    <div class="inner-card">
+      <div class="front-card">
+        <img src="images/my_local_recipe_preview.png" alt="My Local Recipe Preview">
+      </div>
+      <div class="back-card">
+        <p>My Local Recipe Prototype</p>
+        </div>
+      </div>
+    </a>
+</div>
 
+<div class="flip-card">
   <a href="projecthandoff.html">
-    <img src="images/editing_affinitywall.jpg" alt="Editing affinity wall">
-    <!-- <p>Project Handoff and Documentation Analysis For a University of Michigan Department</p> -->
+    <div class="inner-card">
+      <div class="front-card">
+        <img src="images/editing_affinitywall.jpg" alt="Editing affinity wall">
+      </div>
+      <div class="back-card">
+        <p>Project Handoff and Knowledge Transfer Assessment<p>
+      </div>
+    </div>
   </a>
 </div>
 </div>
 </div>
+
 <script  src="js/index.js"></script>
 </main>
 

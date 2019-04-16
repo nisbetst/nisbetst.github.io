@@ -1,0 +1,380 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+#navwrapper{
+  height: 80px;
+}
+
+.mynav {
+  position:fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 9;
+}
+
+.mynav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  }
+
+nav a:hover {
+  background-color: #111;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mynav .icon {
+  display: none;
+}
+
+a.skip{
+	padding:10px;
+	text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+	position: absolute;
+    top: -80px;
+    transition: top ease-in 1s;
+}
+
+a.skip:focus{
+	background: white;
+	top: 0px;
+	border: 1px solid black;
+}
+
+.current{
+  border: solid white 2px;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;;
+  font-size: 50px;
+  text-align: center;
+  margin: 50px 25px 50px 25px;
+}
+
+h2{
+  font-family:'Roboto Slab', serif;
+  font-size: 30px;
+}
+
+p{
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+}
+
+
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.broadcast {
+  padding: .6rem 0;
+  color: white;
+  display: flex;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.broadcast {
+  background: #444;
+  position: relative;
+  font-weight: bold;
+}
+
+.hide-broadcast {
+    position: absolute;
+    right: 20px;
+    top: 3px;
+  }
+
+.hide-broadcast-target {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      border-radius: 50%;
+      padding: 4px;
+      transition: all ease .3s;
+    }
+
+
+.fa-window-close{
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+
+.projects{
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectimg{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 266px;
+  border: 1px solid #f1f1f1;
+   perspective: 1000px;
+  margin-top: 30px;
+}
+
+.inner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .inner-card {
+  transform: rotateY(180deg);
+}
+
+.front-card, .back-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #bbb;
+  color: black;
+}
+
+.back-card {
+  background-color: lightgrey;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card img{
+  width: 400px;
+  height: 266px;
+  margin-bottom: 50px;
+}
+
+.flip-card p{
+  position: relative;
+  bottom: -40%;
+}
+.projects {
+    margin-bottom: 50px;
+}
+
+.mylocal{
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mylocal p{
+  margin-bottom: 50px;
+}
+
+.gallery{
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img{
+  width: 400px;
+  border: solid black 2px;
+  align-self: center;
+  margin-bottom: 50px;
+  }
+
+.handoff{
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.handoff h2{
+  margin-bottom: 50px;
+}
+
+.handoff p{
+  margin-bottom: 50px;
+}
+
+.handoff img{
+  width: 100%;
+  align-self: center;
+  margin-bottom: 50px;
+}
+
+.aboutcontent{
+  display: flex;
+  flex-direction: column-reverse;
+  /* align-items: baseline; */
+}
+
+.headshot{
+  width: 30%;
+  height: 30%;
+  align-self: center;
+  margin-bottom: 50px
+}
+
+.aboutcontent p{
+  margin: auto;
+  width: 75%
+}
+
+.resumecontent{
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+iframe{
+  height: 1150px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer{
+  margin-top: 100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  }
+
+.footer p{
+  padding-top: 11px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.fa-linkedin {
+  color: white;
+}
+
+@media only screen and (min-width: 800px) {
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  p{
+    font-size: 20px;
+  }
+  .projectimg{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 40px;
+  }
+
+  .projectimg .flip-card{
+    width:300px;
+    height: 200px;
+    margin-right: 50px;
+  }
+
+  .flip-card img{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+  }
+
+  .gallery{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+     }
+
+  .gallery img{
+    margin-right: 25px;
+    }
+
+  .aboutcontent{
+    margin:auto;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+
+  .aboutcontent p{
+  margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  .mynav a {display: none;}
+  .mynav a.icon {
+    float: left;
+    display: block;
+  }
+
+.mynav.responsive {position: fixed;
+}
+
+
+.mynav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+  }
+}
