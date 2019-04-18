@@ -22,7 +22,7 @@
     </script>
 </head>
 
-<body class="index">
+<body class="index" onload="typeWriter()">
 <a href="#maincontent" class="skip">Skip to main content</a>
 <header>
   <div id=navwrapper>
@@ -30,7 +30,7 @@
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
           <i class="fas fa-bars"></i>
         </a>
-        <a href = "index.html" class="current">My Work</a>
+        <a href = "index.html" class="current">Home</a>
         <a href = "mylocalrecipe.html">My Local Recipe</a>
         <a href = "projecthandoff.html">Project Handoff Assessment</a>
         <a href = "about.html">About</a>
@@ -43,9 +43,9 @@
   <div class="container"> <p>Welcome to my site!</p>
   </div>
   <div class="hide-broadcast">
-    <a href="#" class="hide-broadcast-target">
+    <a href="#" class="hide-broadcast-target" alt="hide broadcast bar">
         <i class="fas fa-window-close"></i>
-    </a>    
+    </a>
   </div>
 </div>
 
@@ -53,11 +53,11 @@
 
 
 
-<h1>MY WORK</h1>
+<h1>My Work</h1>
 
 <div class="projects">
 
-<p>My name is Stephen Nisbet and I am a UX researher, designer, and life enthusiast. These are the projects I've worked on and this is their story.</p>
+<p id='home-txt'></p>
 
 <div class="projectimg">
 <div class="flip-card">
@@ -93,7 +93,7 @@
 
 <div class="footer">
 <footer>
-<p>2019 Stephen Nisbet <i class="fab fa-linkedin" alt="Link to linkedin"></i></p>
+<p>2019 Stephen Nisbet <a href="https://www.linkedin.com/in/stephen-nisbet-a799b8b2/"><i class="fab fa-linkedin" alt="Link to linkedin"></i></a></p>
 </footer>
 </div>
 
